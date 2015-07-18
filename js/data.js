@@ -109,9 +109,6 @@ var render = {
         }, (progress * animationTime * 1000) );
 
         maxTimer = (progress * animationTime * 1000 > maxTimer) ? progress * animationTime * 1000 : maxTimer;
-
-
-        console.log(progress);
       }
 
     });
@@ -142,7 +139,6 @@ var render = {
     render._('escrutadoDecimal', porcentajeSplit[1]);
 
     pumpTimer[0] = setTimeout(function(){
-      console.log(porcentajeMesas);
       if(porcentajeMesas > 92){
         $('.torso .principal').css({
           display: 'none'
@@ -152,9 +148,6 @@ var render = {
         });
       }
     }, maxTimer)
-
-
-    // console.log(data);
 
   },
 
@@ -169,13 +162,15 @@ var render = {
 /*  Carga de datos inicial
 /* ============================== */
 
-// Carga los datos principales
-$.when.apply($, [
-  data.load('general', 0)
+var load = function(){
+  // Carga los datos principales
+  $.when.apply($, [
+    data.load('general', 0)
 
-]).then(function(){
-  // Render de contenido
-  render.data();
+  ]).then(function(){
+    // Render de contenido
+    render.data();
+  });
+}
 
-  // $('body').removeClass('loading');
-});
+load();
