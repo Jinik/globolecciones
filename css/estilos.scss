@@ -1,0 +1,57 @@
+@keyframes inflar {
+  0%   { transform: translate(0, 0px); }
+  50%  { transform: translate(0, 40px); }
+  100% { transform: translate(0, 0px); }
+}
+@keyframes festejarI {
+  0%   { transform: rotate(20deg); }
+  50%  { transform: rotate(60deg); }
+  100% { transform: rotate(20deg); }
+}
+@keyframes festejarD {
+  0%   { transform: rotate(-20deg); }
+  50%  { transform: rotate(-60deg); }
+  100% { transform: rotate(-20deg); }
+}
+@keyframes lamentarI {
+  0%   { transform: rotate(90deg) translate(-8%, 0%); }
+  50%  { transform: rotate(95deg) translate(-8%, 0%); }
+  100% { transform: rotate(90deg) translate(-8%, 0%); }
+}
+@keyframes lamentarD {
+  0%   { transform: rotate(-105deg) translate(12%, 0%); }
+  50%  { transform: rotate(-110deg) translate(12%, 0%); }
+  100% { transform: rotate(-105deg) translate(12%, 0%); }
+}
+
+.torso .final{
+  display: none;
+
+  .i {
+  	transform-origin: 93% 50%;
+  }
+  .d {
+  	transform-origin: 7% 50%;
+  }
+}
+.larreta .i {
+	animation: festejarI .5s infinite;
+}
+.larreta .d {
+	animation: festejarD .5s infinite;
+}
+.lusto .i {
+  animation: lamentarI .5s infinite;
+}
+.lusto .d {
+  animation: lamentarD .5s infinite;
+}
+
+.globo {
+	transform-origin: 50.5% 100.7%;
+	transition: transform 15s ease-out;
+}
+.aguja {
+	transform-origin: 50% 5%;
+	transition: transform 3s linear;
+}
