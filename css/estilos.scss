@@ -1,3 +1,75 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+
+  small {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #666;
+  }
+}
+p {
+  max-width: 1024px;
+  margin: 60px auto;
+  color: #666;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.loader {
+  height: 0;
+  text-align: center;
+
+  &.hidden {
+    display: none;
+  }
+
+  i {
+    font-size: 2.5em;
+  }
+}
+.update {
+  margin-bottom: 30px;
+  font-size: .8em;
+  text-align: center;
+
+  .error {
+    color: #ff0000
+  }
+}
+
+svg {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.torso .final{
+  display: none;
+
+  .i {
+  	transform-origin: 93% 50%;
+  }
+  .d {
+  	transform-origin: 7% 50%;
+  }
+}
+
+.globo {
+	transform-origin: 50.5% 100.7%;
+	transition: transform 15s ease-out;
+}
+.aguja {
+	transform-origin: 50% 5%;
+	transition: transform 3s linear;
+}
+
+// Animaciones
+
 @keyframes inflar {
   0%   { transform: translate(0, 0px); }
   50%  { transform: translate(0, 40px); }
@@ -22,36 +94,4 @@
   0%   { transform: rotate(-105deg) translate(12%, 0%); }
   50%  { transform: rotate(-110deg) translate(12%, 0%); }
   100% { transform: rotate(-105deg) translate(12%, 0%); }
-}
-
-.torso .final{
-  display: none;
-
-  .i {
-  	transform-origin: 93% 50%;
-  }
-  .d {
-  	transform-origin: 7% 50%;
-  }
-}
-.larreta .i {
-	animation: festejarI .5s infinite;
-}
-.larreta .d {
-	animation: festejarD .5s infinite;
-}
-.lusto .i {
-  animation: lamentarI .5s infinite;
-}
-.lusto .d {
-  animation: lamentarD .5s infinite;
-}
-
-.globo {
-	transform-origin: 50.5% 100.7%;
-	transition: transform 15s ease-out;
-}
-.aguja {
-	transform-origin: 50% 5%;
-	transition: transform 3s linear;
 }
